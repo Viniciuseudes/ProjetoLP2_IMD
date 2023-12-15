@@ -6,6 +6,7 @@ import java.util.Scanner;
 public class ComandoFuncoes {
     Scanner leitura = new Scanner(System.in);
     ArrayList<Venda> vendas = new ArrayList<>();
+    ArrayList<Produto> produtos = new ArrayList<>();
     ArrayList<Cliente> clientes = new ArrayList();
 
 
@@ -83,4 +84,25 @@ public class ComandoFuncoes {
             System.out.println("Cliente não encontrado!!");
         }
     }
+
+    public void cadastrarMilho() {
+        System.out.println("Cadastrando Milho");
+        System.out.println("Nome: ");
+        leitura.nextLine();
+        String nome = leitura.nextLine();
+        System.out.println("Peso: ");
+        String peso = leitura.nextLine();
+        System.out.println("Tipo: ");
+        String tipo = leitura.nextLine();
+        System.out.println("Quantidade estoque: ");
+        int qEstoque = leitura.nextInt();
+        System.out.println("Valor: ");
+        float valor = leitura.nextFloat();
+
+        Milho milho = new Milho(tipo, nome, peso, valor, qEstoque);
+        produtos.add(milho);
+        System.out.println("Milho cadastrado com sucesso!");
+    }
+
 }
+
