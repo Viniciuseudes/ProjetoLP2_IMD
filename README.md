@@ -28,8 +28,14 @@ No menu princpial você pode:
 7 - Relatar Vendas         
 0 - Finalizar Sistema 
 
+## COMO DAR BUILD
+javac ProjetoLP2_IMD.java
 
 ## COMO EXECULTAR:
+java ProjetoLP2_IMD
+
+## OUTRA OPÇÃO
+Ir na classe Principal.java e dar run
 
 
 
