@@ -159,6 +159,46 @@ public class ComandoFuncoes {
         produtos.add(soja);
         System.out.println("Soja cadastrada com sucesso!");
     }
+    public void cadastrarAdubo() {
+        System.out.println("Cadastrando Adubo");
+        System.out.println("Nome: ");
+        leitura.nextLine();
+        String nome = leitura.nextLine();
+        System.out.println("Peso: ");
+        String peso = leitura.nextLine();
+        System.out.println("Tipo de Adubo: ");
+        String tipo = leitura.nextLine();
+        System.out.println("Quantidade estoque: ");
+        int qEstoque = leitura.nextInt();
+        System.out.println("Valor: ");
+        float valor = leitura.nextFloat();
+        System.out.println("É orgânico? (S/N): ");
+        boolean organico = leitura.nextBoolean();
+
+        Adubo adubo = new Adubo(tipo, nome, peso, valor, qEstoque, organico);
+        produtos.add(adubo);
+        System.out.println("Adubo cadastrado com sucesso!");
+    }
+
+    public void cadastrarGlifosato() {
+        System.out.println("Cadastrando Glifosato");
+        System.out.println("Nome: ");
+        leitura.nextLine();
+        String nome = leitura.nextLine();
+        System.out.println("Valor: ");
+        String valor = leitura.nextLine();
+        System.out.println("Quantidade em Estoque: ");
+        float qEstoque = leitura.nextFloat();
+        System.out.println("Volume em Litros: ");
+        float volumeEmLitros = leitura.nextFloat();
+
+        Glifosato glifosato = new Glifosato(nome, valor, qEstoque, volumeEmLitros);
+        produtos.add(glifosato);
+
+        System.out.println("Glifosato cadastrado com sucesso!");
+    }
+
+
 
 
 }
