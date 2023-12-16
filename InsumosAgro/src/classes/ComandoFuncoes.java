@@ -218,6 +218,34 @@ public class ComandoFuncoes {
         }
     }
 
+    public void realizarVenda(){
+        boolean encontrou = false;
+        System.out.println("Nome do produto: ");
+        leitura.nextLine();
+        String nome = leitura.nextLine();
+
+        for(Produto produto: produtos){
+            if(nome.equals(produto.getNome())){
+                System.out.println(" ");
+                encontrou = true;
+                System.out.println("Digite a quantidade de venda: ");
+                int quantidade = leitura.nextInt();
+                if(produto.getqEstoque() < quantidade){
+                    System.out.println("Estoque insuficiente");
+                }else{
+                    produto.setqEstoque(produto.getqEstoque() - quantidade);
+                    Venda venda = new Venda(quantidade, nome, produto.getPeso(), produto.getValor(), produto.getqEstoque());
+                    vendas.add(venda);
+                    System.out.println("Venda realizada com sucesso!!");
+                }
+                break;
+            }
+        }
+        if(!encontrou){
+            System.out.println(" ");
+            System.out.println("Produto não encontrado!!");
+        }
+    }
 
 
 
