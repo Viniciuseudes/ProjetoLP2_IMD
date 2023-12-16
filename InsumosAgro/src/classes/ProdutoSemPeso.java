@@ -3,7 +3,7 @@ package classes;
 public class ProdutoSemPeso extends Produto {
     private float volumeEmLitros;
 
-    public ProdutoSemPeso(String nome, float valor, int qEstoque, float volumeEmLitros) {
+    public ProdutoSemPeso(String nome, String valor, float qEstoque, float volumeEmLitros) {
         super(nome, valor, qEstoque);
         this.volumeEmLitros = volumeEmLitros;
     }
@@ -12,12 +12,11 @@ public class ProdutoSemPeso extends Produto {
         return volumeEmLitros;
     }
 
-
     public void detalhes() {
         System.out.println("Detalhes do Produto");
-        System.out.println("Nome: " + getNome());
-        System.out.println("volume: " + getVolumeEmLitros());
-        System.out.println("Quantidade em Estoque: " + getqEstoque());
-        System.out.println("Valor: " + getValor());
+        System.out.println("Nome: " + super.getNome());
+        System.out.println("Volume: " + getVolumeEmLitros());
+        System.out.println("Quantidade em Estoque: " + super.getqEstoque());
+        System.out.println("Valor: " + super.getValor());
     }
 }
