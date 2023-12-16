@@ -9,6 +9,21 @@ public class Principal {
 
 
         do {
+<<<<<<< HEAD
+            try {
+                System.out.println("\n╔════════════════════════════╗");
+                System.out.println("║         MENU PRINCIPAL     ║");
+                System.out.println("╚════════════════════════════╝");
+                System.out.println("1 - Cadastrar Cliente");
+                System.out.println("2 - Excluir Cliente");
+                System.out.println("3 - Listar Cliente");
+                System.out.println("4 - Cadastrar Produto");
+                System.out.println("5 - Listar Produtos");
+                System.out.println("0 - Finalizar Sistema");
+                System.out.println("╚════════════════════════════╝");
+                System.out.print("Escolha uma opção: ");
+                opcao = manFun.leitura.nextInt();
+=======
 
             System.out.println("\033[1;33m");
             System.out.println("\n╔════════════════════════════╗");
@@ -26,6 +41,7 @@ public class Principal {
             System.out.println("║ 0 - Finalizar Sistema      ║");
             System.out.println("╚════════════════════════════╝");
             opcao = manFun.leitura.nextInt();
+>>>>>>> e84d42103c37d6f67f49b9d773aa197ba36acd79
 
             switch(opcao){
                 case 1:
@@ -232,11 +248,18 @@ public class Principal {
                     System.out.println("Finalizando Sistema!!");
                     break;
                 default:
-                    System.out.println(" ");
-                    System.out.println("Opção invalida!!");
+                    System.out.println("Opção inválida. Por favor, tente novamente.");
+                    break;
             }
+            } catch (InputMismatchException ime) {
+                System.err.println("Erro: Entrada inválida. Por favor, digite um número.");
+                menu.next();  // Limpa a entrada incorreta
+            } catch (Exception e) {
+                System.err.println("Ocorreu um erro inesperado: " + e.getMessage());
+            }
+        } while (opcao != 0);
 
-        }while(opcao != 0);
+        menu.close();
 
     }
 
