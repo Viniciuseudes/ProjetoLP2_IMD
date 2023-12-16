@@ -20,6 +20,9 @@ public class Principal {
             System.out.println("║ 2 - Excluir Cliente        ║");
             System.out.println("║ 3 - Listar Cliente         ║");
             System.out.println("║ 4 - Cadastrar Produto      ║");
+            System.out.println("║ 5 - Listar Produto         ║");
+            System.out.println("║ 6 - Realizar Venda         ║");
+            System.out.println("║ 7 - Relatar Vendas         ║");
             System.out.println("║ 0 - Finalizar Sistema      ║");
             System.out.println("╚════════════════════════════╝");
             opcao = manFun.leitura.nextInt();
@@ -178,6 +181,52 @@ public class Principal {
                     }while(menu != 0);
                     break;
 
+                case 6:
+                    System.out.println(" ");
+
+                    if(manFun.produtos.isEmpty()){
+                        System.out.println("Nenhuma produto cadastrado!!");
+                    }else{
+                        do{
+                            System.out.println(" ");
+                            System.out.println("Realizando Venda");
+                            System.out.println("1 - Realizar venda");
+                            System.out.println("0 - Retornar ao menu");
+                            menu = manFun.leitura.nextInt();
+                            switch(menu){
+                                case 1:
+                                    System.out.println(" ");
+                                    manFun.realizarVenda();
+                                    break;
+                                case 0:
+                                    System.out.println(" ");
+                                    System.out.println("Retornando ao menu!");
+                                    break;
+                                default:
+                                    System.out.println(" ");
+                                    System.out.println("Opção Invalida!!");
+                            }
+                        }while(menu != 0);
+                    }
+                    break;
+
+                case 7:
+                    System.out.println(" ");
+                    if(manFun.vendas.isEmpty()){
+                        System.out.println("Nenhuma produto vendido!!");
+                    }else{
+                        System.out.println(" ");
+                        System.out.println("Relatorio de Vendas");
+                        manFun.relatorioVendas();
+                        System.out.println("0 - Retornar ao menu");
+                        menu = manFun.leitura.nextInt();
+                        if(menu == 0){
+                            break;
+                        }else{
+                            System.out.println("Opção invalida!!");
+                        }
+                    }
+                    break;
                 case 0:
                     System.out.println(" ");
                     System.out.println("Finalizando Sistema!!");
