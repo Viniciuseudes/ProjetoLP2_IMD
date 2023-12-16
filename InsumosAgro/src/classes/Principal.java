@@ -1,11 +1,14 @@
 package classes;
+import java.util.InputMismatchException;
+import java.util.Scanner;
 
 public class Principal {
     public static void main(String[] args) {
 
         ComandoFuncoes manFun = new ComandoFuncoes();
+        Scanner leitura = new Scanner(System.in);
 
-        int opcao, menu;
+        int opcao = 0, menu;
 
 
         do {
@@ -233,16 +236,13 @@ public class Principal {
                     default:
                         System.out.println("Opção inválida!");
                         break;
-                    }
-                } catch(InputMismatchException e){
-                    System.err.println("Entrada inválida. Por favor, insira um número inteiro.");
-                    leitura.nextLine(); // Limpa o buffer do scanner
-                } catch(Exception e){
-                    System.err.println("Ocorreu um erro: " + e.getMessage());
                 }
-            } while (menu != 0) ;
-
-
-        }
+            } catch (InputMismatchException e) {
+                System.err.println("Entrada inválida. Por favor, insira um número inteiro.");
+                leitura.nextLine(); // Limpa o buffer do scanner
+            } catch (Exception e) {
+                System.err.println("Ocorreu um erro: " + e.getMessage());
+            }
+        } while (opcao != 0);
     }
 }
