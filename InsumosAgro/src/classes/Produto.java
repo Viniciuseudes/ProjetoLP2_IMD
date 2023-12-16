@@ -4,6 +4,7 @@ public abstract class Produto {
 
     private String nome;
     private String peso;
+    private float volumeEmLitros;
     private float valor;
     private int qEstoque;
 
@@ -12,6 +13,9 @@ public abstract class Produto {
         this.peso = peso;
         this.valor = valor;
         this.qEstoque = qEstoque;
+    }
+
+    public Produto(String nome, float valor, int qEstoque) {
     }
 
     public float getValor() {
@@ -46,7 +50,6 @@ public abstract class Produto {
         this.qEstoque = qEstoque;
     }
 
-    public abstract void detalhes(){
-    }
+
 
 }

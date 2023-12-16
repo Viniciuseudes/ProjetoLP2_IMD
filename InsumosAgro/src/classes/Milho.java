@@ -19,7 +19,7 @@ public class Milho extends ProdutoComPeso {
 
     @Override
     public void detalhes(){
-        System.out.println("Tipo (Comum ou Castrado): " + getTipo());
+        System.out.println("Tipo (Trangenico ou Hibrido): " + getTipo());
         super.detalhes();
     }
 }
