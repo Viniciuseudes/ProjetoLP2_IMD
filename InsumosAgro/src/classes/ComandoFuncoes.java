@@ -247,7 +247,12 @@ public class ComandoFuncoes {
         }
     }
 
-
+    public void relatorioVendas(){
+        for(Venda venda: vendas){
+            System.out.println("--------------------------------");
+            venda.detalhes();
+        }
+    }
 
 }
 
