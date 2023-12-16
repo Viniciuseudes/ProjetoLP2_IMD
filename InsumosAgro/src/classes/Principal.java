@@ -53,13 +53,7 @@ public class Principal {
                             default:
                                 System.out.println("Opção inválida!");
                         }
-                    } catch (InputMismatchException e) {
-                    System.err.println("Entrada inválida. Por favor, insira um número inteiro.");
-                    leitura.nextLine(); // Limpa o buffer do scanner
-                } catch (Exception e) {
-                    System.err.println("Ocorreu um erro: " + e.getMessage());
-                }
-            } while (menu != 0);
+                    } while (menu != 0);
             break;
 
                 case 2:
@@ -237,12 +231,15 @@ public class Principal {
                     System.out.println("Finalizando Sistema!!");
                     break;
                 default:
-                    System.out.println(" ");
-                    System.out.println("Opção invalida!!");
+                    System.out.println("Opção inválida!");
+            } catch (InputMismatchException e) {
+                System.err.println("Entrada inválida. Por favor, insira um número inteiro.");
+                leitura.nextLine(); // Limpa o buffer do scanner
+            } catch (Exception e) {
+                System.err.println("Ocorreu um erro: " + e.getMessage());
             }
+        } while (opcao != 0);
 
-        }while(opcao != 0);
-
+        leitura.close();
     }
-
 }
