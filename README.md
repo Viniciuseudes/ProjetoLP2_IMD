@@ -29,4 +29,11 @@ No menu princpial você pode:
 0 - Finalizar Sistema 
 
 
+## COMO REALIZAR O BUILD :
+
+
+
+## COMO EXECULTAR:
+
+
 
