@@ -1,7 +1,11 @@
 package classes;
 import java.util.InputMismatchException;
 import java.util.Scanner;
-
+/**
+ * A classe Principal é responsável por executar o sistema de gerenciamento de clientes e produtos.
+ * Ela interage com o usuário através de um menu de opções, permitindo cadastrar, listar e excluir clientes e produtos,
+ * além de realizar vendas e exibir relatórios de vendas.
+ */
 public class Principal {
     public static void main(String[] args) {
 
