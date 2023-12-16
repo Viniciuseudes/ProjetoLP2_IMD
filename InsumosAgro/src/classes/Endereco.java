@@ -1,6 +1,10 @@
 
 package classes;
-
+/**
+ * A classe Endereco representa um endereço associado a um cliente.
+ * Ela estende a classe Cliente, adicionando informações de endereço
+ * como rua, número, bairro e CEP.
+ */
 
 public class Endereco extends Cliente {
 
@@ -9,7 +13,16 @@ public class Endereco extends Cliente {
     private String bairro;
     private String cep;
 
-
+    /**
+     * Construtor para a classe Endereco.
+     *
+     * @param rua      A rua do endereço.
+     * @param numero   O número da residência ou estabelecimento.
+     * @param bairro   O bairro do endereço.
+     * @param cep      O CEP do endereço.
+     * @param nome     O nome do cliente (herdado de Cliente).
+     * @param telefone O telefone do cliente (herdado de Cliente).
+     */
     public Endereco(String rua, String numero, String bairro, String cep, String nome, String telefone) {
         super(nome, telefone);
         this.rua = rua;
@@ -52,7 +65,10 @@ public class Endereco extends Cliente {
     }
 
 
-
+    /**
+     * Sobrescreve o método detalhes da classe Cliente para incluir
+     * informações de endereço.
+     */
     @Override
     public void detalhes(){
         super.detalhes();
