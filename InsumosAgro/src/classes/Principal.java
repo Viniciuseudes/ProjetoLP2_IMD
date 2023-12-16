@@ -113,7 +113,11 @@ public class Principal {
                     do{
                         System.out.println(" ");
                         System.out.println("1 - MILHO");
-                        System.out.println("2 - ");
+                        System.out.println("2 - SORGO");
+                        System.out.println("3 - SOJA");
+                        System.out.println("4 - TORTA DE ALGODÃO");
+                        System.out.println("5 - ADUBO");
+                        System.out.println("6 - GLISOFATO");
                         System.out.println("0 - Retornar ao menu");
                         menu = manFun.leitura.nextInt();
                         switch(menu){
@@ -121,9 +125,59 @@ public class Principal {
                                 System.out.println(" ");
                                 manFun.cadastrarMilho();
                                 break;
+                            case 2:
+                                System.out.println(" ");
+                                manFun.cadastrarSorgo();
+                                break;
+                            case 3:
+                                System.out.println(" ");
+                                manFun.cadastrarSoja();
+                                break;
+                            case 4:
+                                System.out.println(" ");
+                                manFun.cadastrarTortaAlgodao();
+                                break;
+                            case 5:
+                                System.out.println(" ");
+                                manFun.cadastrarAdubo();
+                                break;
+                            case 6:
+                                System.out.println(" ");
+                                manFun.cadastrarGlifosato();
+                                break;
                         }
                     }while(menu != 0);
                     break;
+
+                case 5:
+                    System.out.println(" ");
+                    System.out.println("Listando Produtos");
+                    do{
+                        System.out.println(" ");
+                        System.out.println("1 - Produto com Peso");
+                        System.out.println("2 - Produto sem Peso");
+                        System.out.println("0 - Retornar ao menu");
+                        menu = manFun.leitura.nextInt();
+                        switch(menu){
+                            case 1:
+                                System.out.println(" ");
+                                manFun.listarProdutosComPeso();
+                                break;
+                            case 2:
+                                System.out.println(" ");
+                                manFun.listarProdutosSemPeso();
+                                break;
+                            case 0:
+                                System.out.println(" ");
+                                System.out.println("Retornando ao menu!");
+                                break;
+                            default:
+                                System.out.println(" ");
+                                System.out.println("Opção Invalida!!");
+                        }
+                    }while(menu != 0);
+                    break;
+
                 case 0:
                     System.out.println(" ");
                     System.out.println("Finalizando Sistema!!");

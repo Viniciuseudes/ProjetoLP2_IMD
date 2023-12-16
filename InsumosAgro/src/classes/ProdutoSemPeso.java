@@ -3,9 +3,9 @@ package classes;
 public class ProdutoSemPeso extends Produto {
     private float volumeEmLitros;
 
-    public ProdutoSemPeso(String nome, String valor, float qEstoque, float volumeEmLitros) {
-        super(nome, valor, qEstoque);
-        this.volumeEmLitros = volumeEmLitros;
+    public ProdutoSemPeso(String nome, String peso, float valor, int qEstoque) {
+        super(nome, peso, valor, qEstoque);
+
     }
 
     public float getVolumeEmLitros() {

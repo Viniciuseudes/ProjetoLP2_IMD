@@ -198,6 +198,26 @@ public class ComandoFuncoes {
         System.out.println("Glifosato cadastrado com sucesso!");
     }
 
+    public void listarProdutosComPeso() {
+        System.out.println("Produtos com Peso:");
+        for (Produto produto : produtos) {
+            if (produto instanceof ProdutoComPeso) {
+                System.out.println("--------------------------------");
+                produto.detalhes();
+            }
+        }
+    }
+
+    public void listarProdutosSemPeso() {
+        System.out.println("Produtos sem Peso:");
+        for (Produto produto : produtos) {
+            if (produto instanceof ProdutoSemPeso) {
+                System.out.println("--------------------------------");
+                produto.detalhes();
+            }
+        }
+    }
+
 
 
 

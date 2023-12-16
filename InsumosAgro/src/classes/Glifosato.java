@@ -2,7 +2,7 @@ package classes;
 
 public class Glifosato extends ProdutoSemPeso {
     public Glifosato(String nome, String valor, float qEstoque, float volumeEmLitros) {
-        super(nome, valor, qEstoque, volumeEmLitros);
+        super(nome, valor, qEstoque, (int) volumeEmLitros);
     }
 
     @Override

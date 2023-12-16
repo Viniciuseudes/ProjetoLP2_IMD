@@ -3,18 +3,15 @@ package classes;
 import classes.Produto;
 
 public abstract class ProdutoComPeso extends Produto {
-    private String peso;
+
 
     public ProdutoComPeso(String nome, String peso, float valor, int qEstoque) {
-        super(nome, valor, qEstoque);
-        this.peso = peso;
-    }
+        super(nome, peso, valor, qEstoque);
 
-    public String getPeso() {
-        return peso;
     }
 
 
+    @Override
     public void detalhes() {
         System.out.println("Detalhes do ProdutoComPeso");
         System.out.println("Nome: " + getNome());

@@ -15,8 +15,6 @@ public abstract class Produto {
         this.qEstoque = qEstoque;
     }
 
-    public Produto(String nome, float valor, int qEstoque) {
-    }
 
     public float getValor() {
         return valor;
@@ -51,5 +49,5 @@ public abstract class Produto {
     }
 
 
-
+    public abstract void detalhes();
 }
