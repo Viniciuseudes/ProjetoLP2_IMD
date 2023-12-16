@@ -2,14 +2,19 @@ package classes;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-
+/**
+ * Classe ComandoFuncoes para gerenciar operações de cadastro, exclusão, listagem e venda de produtos e clientes.
+ */
 public class ComandoFuncoes {
     Scanner leitura = new Scanner(System.in);
     ArrayList<Venda> vendas = new ArrayList<>();
     ArrayList<Produto> produtos = new ArrayList<>();
     ArrayList<Cliente> clientes = new ArrayList();
 
-
+    /**
+     * Método para cadastrar um novo cliente.
+     * Captura informações do cliente via entrada do usuário e adiciona o cliente à lista de clientes.
+     */
     public void cadastrarCliente() {
         System.out.println("Nome:");
         leitura.nextLine();
@@ -28,7 +33,10 @@ public class ComandoFuncoes {
         Cliente cli = new Endereco(rua, numero, bairro, cep, nome, telefone);
         clientes.add(cli);
     }
-
+    /**
+     * Método para excluir um cliente existente.
+     * Procura um cliente pelo nome e, se encontrado, o remove da lista de clientes.
+     */
     public void excluirCliente() {
         boolean encontrou = false;
         if (clientes.isEmpty()) {
@@ -50,7 +58,10 @@ public class ComandoFuncoes {
             }
         }
     }
-
+    /**
+     * Método para listar todos os clientes cadastrados.
+     * Exibe os detalhes de cada cliente na lista de clientes.
+     */
     public void listarClientes() {
         if (clientes.isEmpty()) {
             System.out.println(" ");
@@ -64,7 +75,10 @@ public class ComandoFuncoes {
             }
         }
     }
-
+    /**
+     * Método para listar um cliente específico por nome.
+     * Procura um cliente pelo nome e, se encontrado, exibe seus detalhes.
+     */
     public void ListarClientePorNome() {
         boolean encontrou = false;
         System.out.println("Nome do cliente: ");
@@ -84,7 +98,10 @@ public class ComandoFuncoes {
             System.out.println("Cliente não encontrado!!");
         }
     }
-
+    /**
+     * Método para cadastrar um novo produto do tipo Milho.
+     * Captura informações do produto via entrada do usuário e adiciona o produto à lista de produtos.
+     */
     public void cadastrarMilho() {
         System.out.println("Cadastrando Milho");
         System.out.println("Nome: ");
@@ -103,6 +120,10 @@ public class ComandoFuncoes {
         produtos.add(milho);
         System.out.println("Milho cadastrado com sucesso!");
     }
+    /**
+            * Método para cadastrar um novo produto do tipo Sorgo.
+            * Captura informações do produto via entrada do usuário e adiciona o produto à lista de produtos.
+     */
     public void cadastrarSorgo() {
         System.out.println("Cadastrando Sorgo");
         System.out.println("Nome: ");
@@ -121,7 +142,10 @@ public class ComandoFuncoes {
         produtos.add(sorgo);
         System.out.println("Sorgo cadastrado com sucesso!");
     }
-
+    /**
+            * Método para cadastrar um novo produto do tipo Algodão.
+            * Captura informações do produto via entrada do usuário e adiciona o produto à lista de produtos.
+     */
     public void cadastrarTortaAlgodao() {
         System.out.println("Cadastrando Torta de Algodão");
         System.out.println("Nome: ");
@@ -140,7 +164,10 @@ public class ComandoFuncoes {
         produtos.add(tortaAlgodao);
         System.out.println("Torta de Algodão cadastrada com sucesso!");
     }
-
+    /**
+            * Método para cadastrar um novo produto do tipo Soja.
+            * Captura informações do produto via entrada do usuário e adiciona o produto à lista de produtos.
+     */
     public void cadastrarSoja() {
         System.out.println("Cadastrando Soja");
         System.out.println("Nome: ");
@@ -159,6 +186,10 @@ public class ComandoFuncoes {
         produtos.add(soja);
         System.out.println("Soja cadastrada com sucesso!");
     }
+    /**
+            * Método para cadastrar um novo produto do tipo Adubo.
+            * Captura informações do produto via entrada do usuário e adiciona o produto à lista de produtos.
+     */
     public void cadastrarAdubo() {
         System.out.println("Cadastrando Adubo");
         System.out.println("Nome: ");
@@ -179,7 +210,10 @@ public class ComandoFuncoes {
         produtos.add(adubo);
         System.out.println("Adubo cadastrado com sucesso!");
     }
-
+    /**
+            * Método para cadastrar um novo produto do tipo Glifosato.
+            * Captura informações do produto via entrada do usuário e adiciona o produto à lista de produtos.
+     */
     public void cadastrarGlifosato() {
         System.out.println("Cadastrando Glifosato");
         System.out.println("Nome: ");
@@ -197,7 +231,10 @@ public class ComandoFuncoes {
 
         System.out.println("Glifosato cadastrado com sucesso!");
     }
-
+    /**
+     * Método para listar todos os produtos que têm peso.
+     * Exibe os detalhes de cada produto com peso na lista de produtos.
+     */
     public void listarProdutosComPeso() {
         System.out.println("Produtos com Peso:");
         for (Produto produto : produtos) {
@@ -207,7 +244,10 @@ public class ComandoFuncoes {
             }
         }
     }
-
+    /**
+     * Método para listar todos os produtos que não têm peso.
+     * Exibe os detalhes de cada produto sem peso na lista de produtos.
+     */
     public void listarProdutosSemPeso() {
         System.out.println("Produtos sem Peso:");
         for (Produto produto : produtos) {
@@ -217,7 +257,10 @@ public class ComandoFuncoes {
             }
         }
     }
-
+    /**
+     * Método para realizar uma venda.
+     * Captura informações da venda via entrada do usuário e adiciona a venda à lista de vendas.
+     */
     public void realizarVenda(){
         boolean encontrou = false;
         System.out.println("Nome do produto: ");
@@ -246,7 +289,10 @@ public class ComandoFuncoes {
             System.out.println("Produto não encontrado!!");
         }
     }
-
+    /**
+     * Método para exibir um relatório de todas as vendas realizadas.
+     * Exibe os detalhes de cada venda na lista de vendas.
+     */
     public void relatorioVendas(){
         for(Venda venda: vendas){
             System.out.println("--------------------------------");

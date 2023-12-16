@@ -3,28 +3,13 @@ package classes;
 public class Principal {
     public static void main(String[] args) {
 
-       ComandoFuncoes manFun = new ComandoFuncoes();
+        ComandoFuncoes manFun = new ComandoFuncoes();
 
         int opcao, menu;
 
 
         do {
-<<<<<<< HEAD
             try {
-                System.out.println("\n╔════════════════════════════╗");
-                System.out.println("║         MENU PRINCIPAL     ║");
-                System.out.println("╚════════════════════════════╝");
-                System.out.println("1 - Cadastrar Cliente");
-                System.out.println("2 - Excluir Cliente");
-                System.out.println("3 - Listar Cliente");
-                System.out.println("4 - Cadastrar Produto");
-                System.out.println("5 - Listar Produtos");
-                System.out.println("0 - Finalizar Sistema");
-                System.out.println("╚════════════════════════════╝");
-                System.out.print("Escolha uma opção: ");
-                opcao = manFun.leitura.nextInt();
-=======
-
             System.out.println("\033[1;33m");
             System.out.println("\n╔════════════════════════════╗");
             System.out.println("║         MENU PRINCIPAL     ║");
@@ -41,7 +26,6 @@ public class Principal {
             System.out.println("║ 0 - Finalizar Sistema      ║");
             System.out.println("╚════════════════════════════╝");
             opcao = manFun.leitura.nextInt();
->>>>>>> e84d42103c37d6f67f49b9d773aa197ba36acd79
 
             switch(opcao){
                 case 1:
@@ -67,11 +51,16 @@ public class Principal {
                                 System.out.println("Retornando ao menu!");
                                 break;
                             default:
-                                System.out.println(" ");
-                                System.out.println("Opção Invalida!!");
+                                System.out.println("Opção inválida!");
                         }
-                    }while(menu != 0);
-                    break;
+                    } catch (InputMismatchException e) {
+                    System.err.println("Entrada inválida. Por favor, insira um número inteiro.");
+                    leitura.nextLine(); // Limpa o buffer do scanner
+                } catch (Exception e) {
+                    System.err.println("Ocorreu um erro: " + e.getMessage());
+                }
+            } while (menu != 0);
+            break;
 
                 case 2:
                     System.out.println(" ");
@@ -248,18 +237,11 @@ public class Principal {
                     System.out.println("Finalizando Sistema!!");
                     break;
                 default:
-                    System.out.println("Opção inválida. Por favor, tente novamente.");
-                    break;
+                    System.out.println(" ");
+                    System.out.println("Opção invalida!!");
             }
-            } catch (InputMismatchException ime) {
-                System.err.println("Erro: Entrada inválida. Por favor, digite um número.");
-                menu.next();  // Limpa a entrada incorreta
-            } catch (Exception e) {
-                System.err.println("Ocorreu um erro inesperado: " + e.getMessage());
-            }
-        } while (opcao != 0);
 
-        menu.close();
+        }while(opcao != 0);
 
     }
 
