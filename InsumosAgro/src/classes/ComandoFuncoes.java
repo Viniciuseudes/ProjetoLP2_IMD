@@ -103,6 +103,24 @@ public class ComandoFuncoes {
         produtos.add(milho);
         System.out.println("Milho cadastrado com sucesso!");
     }
+    public void cadastrarSorgo() {
+        System.out.println("Cadastrando Sorgo");
+        System.out.println("Nome: ");
+        leitura.nextLine();
+        String nome = leitura.nextLine();
+        System.out.println("Peso: ");
+        String peso = leitura.nextLine();
+        System.out.println("Tipo: ");
+        String tipo = leitura.nextLine();
+        System.out.println("Quantidade estoque: ");
+        int qEstoque = leitura.nextInt();
+        System.out.println("Valor: ");
+        float valor = leitura.nextFloat();
+
+        Sorgo sorgo = new Sorgo(tipo, nome, peso, valor, qEstoque);
+        produtos.add(sorgo);
+        System.out.println("Sorgo cadastrado com sucesso!");
+    }
 
 }
 
