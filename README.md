@@ -2,7 +2,7 @@
 
 # ITEGRANTES 👨🏽‍💻 :
 
-VINICIUS EUDES GALDINO FERNANDES
+VINICIUS EUDES GALDINO FERNANDES e 
 ALAN DE CASTRO OLIVEIRA 
 
 
@@ -15,7 +15,10 @@ Projeto da disciplina de Linguagem de programação 2,do Instituto Metropole Dig
 
 ## MENU 🌵:
 
+
 No menu princpial você pode:
+
+
 1 - Cadastrar Cliente     
 2 - Excluir Cliente       
 3 - Listar Cliente         
