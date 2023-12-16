@@ -1,25 +1,16 @@
 package classes;
 
 public class Glifosato extends ProdutoSemPeso {
-
-    private String tipo;
-
-    public Glifosato(String tipo, String nome, String peso, float valor, int qEstoque) {
-        super(nome, peso, valor, qEstoque);
-        this.tipo = tipo;
-    }
-
-    public String getTipo() {
-        return tipo;
-    }
-
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
+    public Glifosato(String nome, String valor, float qEstoque, float volumeEmLitros) {
+        super(nome, valor, qEstoque, volumeEmLitros);
     }
 
     @Override
-    public void detalhes(){
-        System.out.println("Tipo (soluvel ou insoluvel): " + getTipo());
-        super.detalhes();
+    public void detalhes() {
+        System.out.println("Detalhes do Glifosato");
+        System.out.println("Nome: " + getNome());
+        System.out.println("Volume em Litros: " + getVolumeEmLitros());
+        System.out.println("Quantidade em Estoque: " + getqEstoque());
+        System.out.println("Valor: " + getValor());
     }
 }
