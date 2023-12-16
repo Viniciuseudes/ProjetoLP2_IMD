@@ -122,5 +122,44 @@ public class ComandoFuncoes {
         System.out.println("Sorgo cadastrado com sucesso!");
     }
 
+    public void cadastrarTortaAlgodao() {
+        System.out.println("Cadastrando Torta de Algodão");
+        System.out.println("Nome: ");
+        leitura.nextLine();
+        String nome = leitura.nextLine();
+        System.out.println("Peso: ");
+        String peso = leitura.nextLine();
+        System.out.println("Tipo: ");
+        String tipo = leitura.nextLine();
+        System.out.println("Quantidade estoque: ");
+        int qEstoque = leitura.nextInt();
+        System.out.println("Valor: ");
+        float valor = leitura.nextFloat();
+
+        TortaAlgodao tortaAlgodao = new TortaAlgodao(tipo, nome, peso, valor, qEstoque);
+        produtos.add(tortaAlgodao);
+        System.out.println("Torta de Algodão cadastrada com sucesso!");
+    }
+
+    public void cadastrarSoja() {
+        System.out.println("Cadastrando Soja");
+        System.out.println("Nome: ");
+        leitura.nextLine();
+        String nome = leitura.nextLine();
+        System.out.println("Peso: ");
+        String peso = leitura.nextLine();
+        System.out.println("Tipo (Farelo ou Casca): ");
+        String tipo = leitura.nextLine();
+        System.out.println("Quantidade estoque: ");
+        int qEstoque = leitura.nextInt();
+        System.out.println("Valor: ");
+        float valor = leitura.nextFloat();
+
+        Soja soja = new Soja(tipo, nome, peso, valor, qEstoque);
+        produtos.add(soja);
+        System.out.println("Soja cadastrada com sucesso!");
+    }
+
+
 }
 
